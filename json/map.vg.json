@@ -7,9 +7,16 @@
     "layer": [
         {
             "data": {
-                "url": "",
-                "format":{}
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/australia.json",
+                "format": {"type": "topojson", "feature": ""}
             }
         }
-        ]
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/greater_melbourne.json",
+                "format":{"type": "topojson", "feature": "greater_melbourne_data"}
+            },
+            "mark": {"type": "geoshape", "stroke":"grey", "fill":"white"}
+        }
+    ]
 }
