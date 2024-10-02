@@ -7,17 +7,26 @@
     "layer": [
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/australia.json",
-                "format": {"type": "topojson", "feature": "australia"}
-            },
-            "mark": {"type": "geoshape", "stroke": "grey", "fill":"white"}
-        },
-        {
-            "data": {
                 "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/greater_melbourne.json",
                 "format":{"type": "topojson", "feature": "greater_melbourne_data"}
             },
-            "mark": {"type": "geoshape", "stroke":"grey", "fill":"white"}
+            "transform": [
+                {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.Aust_Abor_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
+                {"calculate": "(datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100", "as": "ratio"}
+            ],
+            "mark": {"type": "geoshape", "stroke":"grey", "fill":"white"},
+            "encoding": {
+                "color": {
+                    "field": "ratio",
+                    "type": "quantitative",
+                    "scale": {"type": "linear"}
+                },                                                      
+                "tooltip": [
+                    {"field": "properties.SAL_NAME_2021", "type": "nominal", "title": "Greater Melbourne Area"},
+                    {"field": "ratio", "type": "quantitative", "title": "Share of population (%)"}
+                ]
+            }
+
         }
     ]
 }

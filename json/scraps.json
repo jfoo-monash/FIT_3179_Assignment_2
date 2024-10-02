@@ -1,0 +1,7 @@
+{
+    "data": {
+        "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/australia.json",
+        "format": {"type": "topojson", "feature": "australia"}
+    },
+    "mark": {"type": "geoshape", "stroke": "grey", "fill":"white"}
+}
