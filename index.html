@@ -14,9 +14,14 @@
     <!-- Extra scripts should go here -->
     <script>
         // Embed vegalite chart script here
+        var greater_melbourne = "json/map.vg.json";
+        vegaEmbed('#ethnicity_map', greater_melbourne).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          }).catch(console.error);
     </script>
 </head>
 <body>
+    <title></title>
     <div id="description">
         <!-- Put description text in here -->
     </div>

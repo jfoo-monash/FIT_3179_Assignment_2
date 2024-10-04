@@ -2,16 +2,44 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
     "height": 450,
+    "params": [
+        {
+            "name": "zoom_level",
+            "value": 18000
+        },
+        {
+            "name": "center_to",
+            "value": [145.3, -37.85],
+            "bind": {
+            "input": "select",
+            "options": [
+            [145.3, -37.85],
+            [144.3, -38.1],
+            [144.9, -36.7],
+            [147.1, -38.1]
+            ],
+            "labels": ["Greater Melbourne", "Geelong", "Bendigo", "Sale"],
+            "name": "Map Centre: "
+            }
+        }
+    ],
     "title": "",
-    "projection": {"type": "equirectangular"},
+    "projection": {"type": "equirectangular", "center":{"expr": "center_to"}, "scale": {"expr": "zoom_level"}},
     "layer": [
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/australia.json",
+                "format":{"type": "topojson", "feature": "australia"}
+            },
+            "mark": {"type": "geoshape", "stroke":"grey", "fill": "white"}
+        },
         {
             "data": {
                 "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/greater_melbourne.json",
                 "format":{"type": "topojson", "feature": "greater_melbourne_data"}
             },
             "transform": [
-                {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.Aust_Abor_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
+                {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
                 {"calculate": "(datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100", "as": "ratio"},
                 {"calculate": "datum.ratio < 0 ? 0 : datum.ratio", "as": "ratio"}
 
