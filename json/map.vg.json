@@ -12,14 +12,17 @@
             },
             "transform": [
                 {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.Aust_Abor_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
-                {"calculate": "(datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100", "as": "ratio"}
-            ],
-            "mark": {"type": "geoshape", "stroke":"grey", "fill":"white"},
+                {"calculate": "(datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100", "as": "ratio"},
+                {"calculate": "datum.ratio < 0 ? 0 : datum.ratio", "as": "ratio"}
+
+                ],
+            "mark": {"type": "geoshape", "stroke":"grey"},
             "encoding": {
                 "color": {
                     "field": "ratio",
                     "type": "quantitative",
-                    "scale": {"type": "linear"}
+                    "scale": {"type": "linear"},
+                    "title": "Ethnic share of population (%)"
                 },                                                      
                 "tooltip": [
                     {"field": "properties.SAL_NAME_2021", "type": "nominal", "title": "Greater Melbourne Area"},
