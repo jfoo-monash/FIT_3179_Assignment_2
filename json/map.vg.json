@@ -14,12 +14,12 @@
             "input": "select",
             "options": [
             [145.3, -37.85],
-            [144.3, -38.1],
-            [144.9, -36.7],
+            [151,-33.650],
+            [153.032,-27.461],
             [147.1, -38.1]
             ],
-            "labels": ["Greater Melbourne", "Geelong", "Bendigo", "Sale"],
-            "name": "Map Centre: "
+            "labels": ["Melbourne", "Sydney", "Brisbane", "Sale"],
+            "name": "Capital City: "
             }
         }
     ],
@@ -42,7 +42,6 @@
                 {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
                 {"calculate": "(datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100", "as": "ratio"},
                 {"calculate": "datum.ratio < 0 ? 0 : datum.ratio", "as": "ratio"}
-
                 ],
             "mark": {"type": "geoshape", "stroke":"grey"},
             "encoding": {
@@ -53,11 +52,61 @@
                     "title": "Ethnic share of population (%)"
                 },                                                      
                 "tooltip": [
-                    {"field": "properties.SAL_NAME_2021", "type": "nominal", "title": "Greater Melbourne Area"},
+                    {"field": "properties.SAL_NAME_2021", "type": "nominal", "title": "Suburb"},
                     {"field": "ratio", "type": "quantitative", "title": "Share of population (%)"}
                 ]
             }
 
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/greater_sydney_suburbs.json",
+                "format": {"type": "topojson", "feature": "greater_sydney_suburbs"}
+            },
+            "transform": [
+                {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
+                {"calculate": "(datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100", "as": "ratio"},
+                {"calculate": "datum.ratio < 0 ? 0 : datum.ratio", "as": "ratio"}
+
+            ],
+            "mark": {"type": "geoshape", "stroke": "grey"},
+            "encoding": {
+                "color": {
+                    "field": "ratio",
+                    "type": "quantitative",
+                    "scale": {"type": "linear"},
+                    "title": "Ethnic share of population (%)"
+                },                                                      
+                "tooltip": [
+                    {"field": "properties.SAL_NAME_2021", "type": "nominal", "title": "Suburb"},
+                    {"field": "ratio", "type": "quantitative", "title": "Share of population (%)"}
+                ]
+            }
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/greater_brisbane_suburbs.json",
+                "format": {"type": "topojson", "feature": "greater_brisbane_suburbs"}
+            },
+            "transform": [
+                {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
+                {"calculate": "(datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100", "as": "ratio"},
+                {"calculate": "datum.ratio < 0 ? 0 : datum.ratio", "as": "ratio"}
+
+            ],
+            "mark": {"type": "geoshape", "stroke": "grey"},
+            "encoding": {
+                "color": {
+                    "field": "ratio",
+                    "type": "quantitative",
+                    "scale": {"type": "linear"},
+                    "title": "Ethnic share of population (%)"
+                },                                                      
+                "tooltip": [
+                    {"field": "properties.SAL_NAME_2021", "type": "nominal", "title": "Suburb"},
+                    {"field": "ratio", "type": "quantitative", "title": "Share of population (%)"}
+                ]
+            }
         }
     ]
 }
