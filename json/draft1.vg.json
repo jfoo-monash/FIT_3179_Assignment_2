@@ -40,9 +40,9 @@
             },
             "transform": [
                 {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
-                {"calculate": "(datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100", "as": "ratio"},
-                {"calculate": "datum.ratio < 0 ? 0 : datum.ratio", "as": "ratio"}
-            ],
+                {"calculate": "format((datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100, '.2f')", "as": "ratio"},
+                {"calculate": "datum.properties.Aust_Tot_resp <= 100 ? 'Not enough data' : format(datum.ratio, '.2f')", "as": "tooltip_ratio"}
+                ],
             "mark": {"type": "geoshape", "stroke":"grey"},
             "encoding": {
                 "color": {
@@ -56,6 +56,7 @@
                     {"field": "ratio", "type": "quantitative", "title": "Share of population (%)"}
                 ]
             }
+
         },
         {
             "data": {
