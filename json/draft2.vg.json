@@ -13,9 +13,11 @@
             "bind": {
             "input": "select",
             "options": [
-            [145.3, -37.85]
+            [145.3, -37.85],
+            [151,-33.650],
+            [153.032,-27.461]
             ],
-            "labels": ["Melbourne"],
+            "labels": ["Melbourne", "Sydney", "Brisbane"],
             "name": "Capital City: "
             }
         }
