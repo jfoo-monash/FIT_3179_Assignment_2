@@ -14,7 +14,7 @@
         },
         {
             "name": "center_to",
-            "value": [153.032,-27.461],
+            "value": [152.5,-27.1],
             "bind": {
             "input": "select",
             "options": [
