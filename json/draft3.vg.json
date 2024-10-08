@@ -14,13 +14,13 @@
         },
         {
             "name": "center_to",
-            "value": [152.5,-27.1],
+            "value": [144.2, -37.4],
             "bind": {
             "input": "select",
             "options": [
             [144.2, -37.4],
             [150,-33.3],
-            [153.032,-27.461]
+            [152.5,-27.1]
             ],
             "labels": ["Melbourne", "Sydney", "Brisbane"],
             "name": "Capital City: "
