@@ -3,16 +3,23 @@
     "params": [
         {
             "name": "zoom_level",
-            "value": 18000
+            "value": 23000,
+            "bind": {
+                "input": "range",
+                "min": 18000,
+                "max": 36000,
+                "step": 200,
+                "name": "Zoom: "
+            }
         },
         {
             "name": "center_to",
-            "value": [145.3, -37.85],
+            "value": [144.2, -37.4],
             "bind": {
             "input": "select",
             "options": [
-            [145.3, -37.85],
-            [151,-33.650],
+            [144.2, -37.4],
+            [150.9447,-33.8355],
             [153.032,-27.461]
             ],
             "labels": ["Melbourne", "Sydney", "Brisbane"],
@@ -54,6 +61,31 @@
                         },                                                      
                         "tooltip": [
                             {"field": "properties.SA2_NAME_2021", "type": "nominal", "title": "Statistical Area"},
+                            {"field": "properties.Tot_P_Tot_resp", "type": "quantitative", "title": "Total population"},
+                            {"field": "ratio", "type": "quantitative", "title": "Ethnic share of population (%)"}
+                        ]
+                    }
+                },
+                {
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/melbourne_sa2.json",
+                        "format": {"type": "topojson", "feature": "melbourne_sa2"}
+                    },
+                    "transform": [
+                        {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
+                        {"calculate": "format((datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100,'.1f')", "as": "ratio"}
+                    ],
+                    "mark": {"type": "geoshape", "stroke":"grey"},
+                    "encoding": {
+                        "color": {
+                            "field": "ratio",
+                            "type": "quantitative",
+                            "scale": {"type": "linear"},
+                            "title": "Ethnic share of population (%)"
+                        },                                                      
+                        "tooltip": [
+                            {"field": "properties.SA2_NAME_2021", "type": "nominal", "title": "Statistical Area"},
+                            {"field": "properties.Tot_P_Tot_resp", "type": "quantitative", "title": "Total population"},
                             {"field": "ratio", "type": "quantitative", "title": "Ethnic share of population (%)"}
                         ]
                     }
@@ -66,8 +98,21 @@
                 "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/melbourne_sa2.json",
                 "format": {"type": "topojson", "feature": "melbourne_sa2"}
             },
+            "transform": [
+                {
+                    "fold": ["properties.English_Tot_resp","properties.Aust_Tot_resp", "properties.Irish_Tot_resp", "properties.Scottish_Tot_resp", "properties.Chinese_Tot_resp"], "as": ["key", "value"]
+                },
+                {
+                    "calculate": "datum.key == 'properties.Aust_Tot_resp' ? 'Australian' : datum.key == 'properties.English_Tot_resp' ? 'English' : datum.key == 'properties.Irish_Tot_resp' ? 'Irish' : datum.key == 'properties.Scottish_Tot_resp' ? 'Scottish' : datum.key == 'properties.Chinese_Tot_resp' ? 'Chinese' : datum.key",
+                    "as": "x-axis-key"
+                }
+
+            ],
             "mark": {"type": "bar"},
-            "encoding": {}
+            "encoding": {
+                "x":{"field": "x-axis-key", "type": "nominal", "title": "Ancestry"},
+                "y":{"field": "value", "type": "quantitative", "title": "Melbourne Total Persons"}
+            }
         }
     ]
 }
