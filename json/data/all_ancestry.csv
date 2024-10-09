@@ -1,31 +1,33 @@
-Ancestry	total_responses
-Australian	"7,596,753"
-Australian Aboriginal	"741,307"
-Chinese	"1,390,639"
-Croatian	"164,362"
-Dutch	"381,948"
-English	"8,385,928"
-Filipino	"408,842"
-French	"148,927"
-German	"1,026,138"
-Greek	"424,744"
-Hungarian	"81,029"
-Indian	"783,953"
-Irish	"2,410,833"
-Italian	"1,108,364"
-Korean	"136,888"
-Lebanese	"248,434"
-Macedonian	"111,352"
-Maltese	"198,989"
-Maori	"170,057"
-New Zealander	"203,512"
-Polish	"209,281"
-Russian	"98,107"
-Samoan	"98,022"
-Scottish	"2,176,777"
-Serbian	"94,997"
-South African	"144,666"
-Spanish	"128,693"
-Sri Lankan	"95,948"
-Vietnamese	"334,785"
-Welsh	"156,108"
+ancestry,responses
+Australian,7596753
+Australian Aboriginal,741307
+Chinese,1390639
+Croatian,164362
+Dutch,381948
+English,8385928
+Filipino,408842
+French,148927
+German,1026138
+Greek,424744
+Hungarian,81029
+Indian,783953
+Irish,2410833
+Italian,1108364
+Korean,136888
+Lebanese,248434
+Macedonian,111352
+Maltese,198989
+Maori,170057
+New Zealander,203512
+Polish,209281
+Russian,98107
+Samoan,98022
+Scottish,2176777
+Serbian,94997
+South African,144666
+Spanish,128693
+Sri Lankan,95948
+Vietnamese,334785
+Welsh,156108
+,
+,

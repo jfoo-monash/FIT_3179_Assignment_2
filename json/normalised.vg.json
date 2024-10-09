@@ -30,7 +30,7 @@
             }
         }
     ],
-    "title": "Non-Australian/English Residents in Australian Capital Cities",
+    "title": {"text":"Non-Australian/English Residents in Australian Capital Cities", "fontSize":20},
     "projection": {"type": "equirectangular", "center":{"expr": "center_to"}, "scale": {"expr": "zoom_level"}},
     "layer": [
         {
@@ -62,7 +62,7 @@
                 },                                                      
                 "tooltip": [
                     {"field": "properties.SA2_NAME_2021", "type": "nominal", "title": "Statistical Area"},
-                    {"field": "normalised_pop", "type": "quantitative", "title": "People per square kilometer"}
+                    {"field": "normalised_pop", "type": "quantitative", "title": "Persons per square kilometer"}
                 ]
             }
         }
