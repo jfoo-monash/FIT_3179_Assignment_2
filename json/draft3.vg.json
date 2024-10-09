@@ -37,14 +37,14 @@
             "layer": [
                 {
                     "data": {
-                        "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/australia.json",
+                        "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/australia.json",
                         "format":{"type": "topojson", "feature": "australia"}
                     },
                     "mark": {"type": "geoshape", "stroke":"grey", "fill": "white"}
                 },
                 {
                     "data": {
-                        "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/melbourne_sa2.json",
+                        "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/melbourne_sa2.json",
                         "format": {"type": "topojson", "feature": "melbourne_sa2"}
                     },
                     "transform": [
@@ -68,7 +68,7 @@
                 },
                 {
                     "data": {
-                        "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/sydney_sa2.json",
+                        "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/sydney_sa2.json",
                         "format": {"type": "topojson", "feature": "sydney_sa2"}
                     },
                     "transform": [
@@ -92,7 +92,7 @@
                 },
                 {
                     "data": {
-                        "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/brisbane_sa2.json",
+                        "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/brisbane_sa2.json",
                         "format": {"type": "topojson", "feature": "brisbane_sa2"}
                     },
                     "transform": [
@@ -119,7 +119,7 @@
         },
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/melbourne_sa2.json",
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/melbourne_sa2.json",
                 "format": {"type": "topojson", "feature": "melbourne_sa2"}
             },
             "transform": [

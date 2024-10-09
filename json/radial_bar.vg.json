@@ -1,0 +1,21 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A radial bar chart with distinct segments for each category.",
+    "data": {
+      "values": [
+        {"category": "A", "value": 4},
+        {"category": "B", "value": 6},
+        {"category": "C", "value": 8},
+        {"category": "D", "value": 2},
+        {"category": "E", "value": 7}
+      ]
+    },
+    "mark": {"type": "arc", "innerRadius": 50},
+    "encoding": {
+      "theta": {"field": "category", "type": "nominal"},
+      "radius": {"field": "value", "scale": {"type": "linear", "zero": true, "rangeMin": 20}},
+      "color": {"field": "category", "type": "nominal"},
+      "tooltip": [{"field": "category"}, {"field": "value"}]
+    }
+  }
+  

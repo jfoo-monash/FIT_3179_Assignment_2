@@ -1,0 +1,70 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 450,
+    "params": [
+        {
+            "name": "zoom_level",
+            "value": 500,
+            "bind": {
+                "input": "range",
+                "min": 500,
+                "max": 38000,
+                "step": 100,
+                "name": "Zoom Select: "
+            }
+        },
+        {
+            "name": "center_to",
+            "value": [133.62,-25.11],
+            "bind": {
+            "input": "select",
+            "options": [
+                [133.62,-25.11],
+                [145.1, -37.85],
+                [151,-33.650],
+                [153.032,-27.461]
+            ],
+            "labels": ["Australia", "Melbourne", "Sydney", "Brisbane"],
+            "name": "Location: "
+            }
+        }
+    ],
+    "title": "Non-Australian/English Residents in Australian Capital Cities",
+    "projection": {"type": "equirectangular", "center":{"expr": "center_to"}, "scale": {"expr": "zoom_level"}},
+    "layer": [
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/australia.json",
+                "format":{"type": "topojson", "feature": "australia"}
+            },
+            "mark": {"type": "geoshape", "stroke":"grey", "fill": "white"}
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/melbourne_sa2.json",
+                "format": {"type": "topojson", "feature": "melbourne_sa2"}
+            },
+            "transform": [
+                {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
+                {"calculate": "format((datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.AREA_ALBERS_SQKM,'.1f')", "as": "normalised_pop"}
+            ],
+            "mark": {"type": "geoshape", "stroke":"grey"},
+            "encoding": {
+                "color": {
+                    "field": "normalised_pop",
+                    "type": "quantitative",
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [0, 100, 500, 1000, 2000, 10000]
+                    },
+                    "title": "Persons per square kilometre"
+                },                                                      
+                "tooltip": [
+                    {"field": "properties.SA2_NAME_2021", "type": "nominal", "title": "Statistical Area"},
+                    {"field": "normalised_pop", "type": "quantitative", "title": "People per square kilometer"}
+                ]
+            }
+        }
+    ]
+}

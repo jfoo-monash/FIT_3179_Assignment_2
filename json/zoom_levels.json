@@ -1,0 +1,71 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 450,
+    "params": [
+        {
+            "name": "zoom_level",
+            "value": 500,
+            "bind": {
+                "input": "select",
+                "options": [
+                    500,
+                    18000,
+                    18000,
+                    18000
+                ],
+                "labels": ["Australia", "Melbourne", "Sydney", "Brisbane"],
+                "name": "Zoom Select: "
+            }
+        },
+        {
+            "name": "center_to",
+            "value": [133.62,-25.11],
+            "bind": {
+            "input": "select",
+            "options": [
+                [133.62,-25.11],
+                [145.3, -37.85],
+                [151,-33.650],
+                [153.032,-27.461]
+            ],
+            "labels": ["Australia", "Melbourne", "Sydney", "Brisbane"],
+            "name": "Capital City: "
+            }
+        }
+    ],
+    "title": "Non-Australian/English Residents in Australian Capital Cities",
+    "projection": {"type": "equirectangular", "center":{"expr": "center_to"}, "scale": {"expr": "zoom_level"}},
+    "layer": [
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/australia.json",
+                "format":{"type": "topojson", "feature": "australia"}
+            },
+            "mark": {"type": "geoshape", "stroke":"grey", "fill": "white"}
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/melbourne_sa2.json",
+                "format": {"type": "topojson", "feature": "melbourne_sa2"}
+            },
+            "transform": [
+                {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
+                {"calculate": "format((datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100,'.1f')", "as": "ratio"}
+            ],
+            "mark": {"type": "geoshape", "stroke":"grey"},
+            "encoding": {
+                "color": {
+                    "field": "ratio",
+                    "type": "quantitative",
+                    "scale": {"type": "linear"},
+                    "title": "Ethnic share of population (%)"
+                },                                                      
+                "tooltip": [
+                    {"field": "properties.SA2_NAME_2021", "type": "nominal", "title": "Statistical Area"},
+                    {"field": "ratio", "type": "quantitative", "title": "Ethnic share of population (%)"}
+                ]
+            }
+        }
+    ]
+}

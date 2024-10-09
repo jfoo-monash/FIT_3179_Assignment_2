@@ -23,7 +23,7 @@
             }
         }
     ],
-    "title": "",
+    "title": "What does the spread of ethnicities in major Australian cities look like?",
     "projection": {"type": "equirectangular", "center":{"expr": "center_to"}, "scale": {"expr": "zoom_level"}},
     "layer": [
         {
