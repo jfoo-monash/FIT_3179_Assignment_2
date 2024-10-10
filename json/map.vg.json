@@ -16,7 +16,7 @@
         },
         {
             "name": "center_to",
-            "value": [131.105,-12.493],
+            "value": [149.0969,-35.3174],
             "bind": {
             "input": "select",
             "options": [
@@ -27,9 +27,10 @@
                 [138.9,-34.923],
                 [115.8006,-31.9727],
                 [147.4410,-42.8350],
-                [131.105,-12.493]
+                [131.105,-12.493],
+                [149.0969,-35.3174]
             ],
-            "labels": ["Australia", "Melbourne", "Sydney", "Brisbane", "Adelaide", "Perth", "Hobart", "Darwin"],
+            "labels": ["Australia", "Melbourne", "Sydney", "Brisbane", "Adelaide", "Perth", "Hobart", "Darwin", "Canberra"],
             "name": "Location: "
             }
         }
@@ -204,6 +205,32 @@
             "data": {
                 "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/darwin_sa2.json",
                 "format": {"type": "topojson", "feature": "darwin_sa2"}
+            },
+            "transform": [
+                {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
+                {"calculate": "format((datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.AREA_ALBERS_SQKM,'.1f')", "as": "normalised_pop"}
+            ],
+            "mark": {"type": "geoshape", "stroke":"grey"},
+            "encoding": {
+                "color": {
+                    "field": "normalised_pop",
+                    "type": "quantitative",
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [0, 100, 500, 1000, 2000, 10000]
+                    },
+                    "title": "Persons per square kilometre"
+                },                                                      
+                "tooltip": [
+                    {"field": "properties.SA2_NAME_2021", "type": "nominal", "title": "Statistical Area"},
+                    {"field": "normalised_pop", "type": "quantitative", "title": "Persons per square kilometer"}
+                ]
+            }
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/canberra_sa2.json",
+                "format": {"type": "topojson", "feature": "canberra_sa2"}
             },
             "transform": [
                 {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
