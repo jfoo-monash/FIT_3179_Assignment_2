@@ -5,105 +5,143 @@
     "params": [
         {
             "name": "zoom_level",
-            "value": 18000
+            "value": 38000,
+            "bind": {
+                "input": "range",
+                "min": 500,
+                "max": 38000,
+                "step": 100,
+                "name": "Zoom Select: "
+            }
         },
         {
             "name": "center_to",
-            "value": [145.3, -37.85],
+            "value": [153.032,-27.461],
             "bind": {
             "input": "select",
             "options": [
-            [145.3, -37.85],
-            [151,-33.650],
-            [153.032,-27.461],
-            [147.1, -38.1]
+                [133.62,-25.11],
+                [145.1, -37.85],
+                [151.3,-33.8],
+                [153.032,-27.461],
+                [138.664,-34.923]
             ],
-            "labels": ["Melbourne", "Sydney", "Brisbane", "Sale"],
-            "name": "Capital City: "
+            "labels": ["Australia", "Melbourne", "Sydney", "Brisbane", "Adelaide"],
+            "name": "Location: "
             }
         }
     ],
-    "title": "What does the spread of ethnicities in major Australian cities look like?",
+    "title": {"text":"Non-Australian/English Residents in Australian Capital Cities", "fontSize":20},
     "projection": {"type": "equirectangular", "center":{"expr": "center_to"}, "scale": {"expr": "zoom_level"}},
     "layer": [
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/australia.json",
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/australia.json",
                 "format":{"type": "topojson", "feature": "australia"}
             },
             "mark": {"type": "geoshape", "stroke":"grey", "fill": "white"}
         },
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/greater_melbourne.json",
-                "format":{"type": "topojson", "feature": "greater_melbourne_data"}
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/melbourne_sa2.json",
+                "format": {"type": "topojson", "feature": "melbourne_sa2"}
             },
             "transform": [
                 {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
-                {"calculate": "(datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100", "as": "ratio"},
-                {"calculate": "datum.ratio < 0 ? 0 : datum.ratio", "as": "ratio"}
+                {"calculate": "format((datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.AREA_ALBERS_SQKM,'.1f')", "as": "normalised_pop"}
             ],
             "mark": {"type": "geoshape", "stroke":"grey"},
             "encoding": {
                 "color": {
-                    "field": "ratio",
+                    "field": "normalised_pop",
                     "type": "quantitative",
-                    "scale": {"type": "linear"},
-                    "title": "Ethnic share of population (%)"
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [0, 100, 500, 1000, 2000, 10000]
+                    },
+                    "title": "Persons per square kilometre"
                 },                                                      
                 "tooltip": [
-                    {"field": "properties.SAL_NAME_2021", "type": "nominal", "title": "Suburb"},
-                    {"field": "ratio", "type": "quantitative", "title": "Share of population (%)"}
+                    {"field": "properties.SA2_NAME_2021", "type": "nominal", "title": "Statistical Area"},
+                    {"field": "normalised_pop", "type": "quantitative", "title": "Persons per square kilometer"}
                 ]
             }
         },
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/greater_sydney_suburbs.json",
-                "format": {"type": "topojson", "feature": "greater_sydney_suburbs"}
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/sydney_sa2.json",
+                "format": {"type": "topojson", "feature": "sydney_sa2"}
             },
             "transform": [
                 {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
-                {"calculate": "(datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100", "as": "ratio"},
-                {"calculate": "datum.ratio < 0 ? 0 : datum.ratio", "as": "ratio"}
-
+                {"calculate": "format((datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.AREA_ALBERS_SQKM,'.1f')", "as": "normalised_pop"}
             ],
-            "mark": {"type": "geoshape", "stroke": "grey"},
+            "mark": {"type": "geoshape", "stroke":"grey"},
             "encoding": {
                 "color": {
-                    "field": "ratio",
+                    "field": "normalised_pop",
                     "type": "quantitative",
-                    "scale": {"type": "linear"},
-                    "title": "Ethnic share of population (%)"
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [0, 100, 500, 1000, 2000, 10000]
+                    },
+                    "title": "Persons per square kilometre"
                 },                                                      
                 "tooltip": [
-                    {"field": "properties.SAL_NAME_2021", "type": "nominal", "title": "Suburb"},
-                    {"field": "ratio", "type": "quantitative", "title": "Share of population (%)"}
+                    {"field": "properties.SA2_NAME_2021", "type": "nominal", "title": "Statistical Area"},
+                    {"field": "normalised_pop", "type": "quantitative", "title": "Persons per square kilometer"}
                 ]
             }
         },
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/greater_brisbane_suburbs.json",
-                "format": {"type": "topojson", "feature": "greater_brisbane_suburbs"}
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/brisbane_sa2.json",
+                "format": {"type": "topojson", "feature": "brisbane_sa2"}
             },
             "transform": [
                 {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
-                {"calculate": "(datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.Tot_P_Tot_resp * 100", "as": "ratio"},
-                {"calculate": "datum.ratio < 0 ? 0 : datum.ratio", "as": "ratio"}
-
+                {"calculate": "format((datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.AREA_ALBERS_SQKM,'.1f')", "as": "normalised_pop"}
             ],
-            "mark": {"type": "geoshape", "stroke": "grey"},
+            "mark": {"type": "geoshape", "stroke":"grey"},
             "encoding": {
                 "color": {
-                    "field": "ratio",
+                    "field": "normalised_pop",
                     "type": "quantitative",
-                    "scale": {"type": "linear"},
-                    "title": "Ethnic share of population (%)"
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [0, 100, 500, 1000, 2000, 10000]
+                    },
+                    "title": "Persons per square kilometre"
                 },                                                      
                 "tooltip": [
-                    {"field": "properties.SAL_NAME_2021", "type": "nominal", "title": "Suburb"},
-                    {"field": "ratio", "type": "quantitative", "title": "Share of population (%)"}
+                    {"field": "properties.SA2_NAME_2021", "type": "nominal", "title": "Statistical Area"},
+                    {"field": "normalised_pop", "type": "quantitative", "title": "Persons per square kilometer"}
+                ]
+            }
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/adelaide_sa2.json",
+                "format": {"type": "topojson", "feature": "adelaide_sa2"}
+            },
+            "transform": [
+                {"calculate": "datum.properties.Aust_Tot_resp + datum.properties.English_Tot_resp", "as": "nonethnic"},
+                {"calculate": "format((datum.properties.Tot_P_Tot_resp - datum.nonethnic)/datum.properties.AREA_ALBERS_SQKM,'.1f')", "as": "normalised_pop"}
+            ],
+            "mark": {"type": "geoshape", "stroke":"grey"},
+            "encoding": {
+                "color": {
+                    "field": "normalised_pop",
+                    "type": "quantitative",
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [0, 100, 500, 1000, 2000, 10000]
+                    },
+                    "title": "Persons per square kilometre"
+                },                                                      
+                "tooltip": [
+                    {"field": "properties.SA2_NAME_2021", "type": "nominal", "title": "Statistical Area"},
+                    {"field": "normalised_pop", "type": "quantitative", "title": "Persons per square kilometer"}
                 ]
             }
         }
