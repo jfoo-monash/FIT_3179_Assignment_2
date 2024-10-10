@@ -5,7 +5,7 @@
     "params": [
         {
             "name": "zoom_level",
-            "value": 38000,
+            "value": 500,
             "bind": {
                 "input": "range",
                 "min": 500,
@@ -16,7 +16,7 @@
         },
         {
             "name": "center_to",
-            "value": [149.0969,-35.3174],
+            "value": [133.62,-25.11],
             "bind": {
             "input": "select",
             "options": [
@@ -28,7 +28,7 @@
                 [115.8006,-31.9727],
                 [147.4410,-42.8350],
                 [131.105,-12.493],
-                [149.0969,-35.3174]
+                [149.0969,-35.4]
             ],
             "labels": ["Australia", "Melbourne", "Sydney", "Brisbane", "Adelaide", "Perth", "Hobart", "Darwin", "Canberra"],
             "name": "Location: "
