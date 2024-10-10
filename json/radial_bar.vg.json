@@ -1,15 +1,44 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A radial bar chart with distinct segments for each category.",
+    "title": {"text": "Top 5 Ancestral Groups excluding Australians and English", "fontSize": 18},
     "data": {
       "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/top5.csv"
     },
-    "mark": {"type": "arc", "innerRadius": 50},
+    "transform": [
+      {
+        "calculate": "datum.ancestry == 'total_persons' ? 'total_persons' : 'invalid'",
+        "as": "total_persons"
+      },
+      {
+        "filter": "datum.ancestry != 'total_persons'"
+      }
+    ],
     "encoding": {
-      "theta": {"field": "category", "type": "nominal"},
-      "radius": {"field": "value", "scale": {"type": "linear", "zero": true, "rangeMin": 20}},
-      "color": {"field": "category", "type": "nominal"},
-      "tooltip": [{"field": "category"}, {"field": "value"}]
-    }
+      "theta": {"field": "ancestry", "type": "nominal"},
+      "radius": {"field": "responses", "scale": {"type": "sqrt", "zero": true}},
+      "color": {"field": "ancestry", "type": "nominal", "title": "Ancestry"},
+      "tooltip": [
+        {"field": "ancestry", "title": "Ancestry"}, 
+        {"field": "responses", "title": "Persons"}
+      ]
+    },
+    "layer": [
+      {
+        "mark": {"type": "arc", "innerRadius": 20}
+      },
+      {
+        "mark": {
+          "type": "text",
+          "radius": {"field": "responses"},
+          "align": "center",
+          "baseline": "middle"
+        },
+        "encoding": {
+          "text": {"field": "responses", "type": "quantitative"},
+          "color": {"value": "black"}
+        }
+      }
+    ]
   }
   
