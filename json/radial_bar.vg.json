@@ -1,14 +1,18 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A radial bar chart with distinct segments for each category.",
-    "title": {"text": "Top 5 Ancestral Groups excluding Australians and English", "fontSize": 18},
+    "title": {"text": "Top 5 Ethnicities in Australia excluding Australians and English", "fontSize": 18},
     "data": {
       "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/top5.csv"
     },
     "transform": [
       {
-        "calculate": "datum.ancestry == 'total_persons' ? 'total_persons' : 'invalid'",
+        "calculate": "25422788",
         "as": "total_persons"
+      },
+      {
+        "calculate": "format(datum.responses/datum.total_persons * 100, '.1f')",
+        "as": "percent_total_pop"
       },
       {
         "filter": "datum.ancestry != 'total_persons'"
@@ -20,7 +24,8 @@
       "color": {"field": "ancestry", "type": "nominal", "title": "Ancestry"},
       "tooltip": [
         {"field": "ancestry", "title": "Ancestry"}, 
-        {"field": "responses", "title": "Persons"}
+        {"field": "responses", "title": "Persons"},
+        {"field": "percent_total_pop", "title":"Share of population (%)"}
       ]
     },
     "layer": [
