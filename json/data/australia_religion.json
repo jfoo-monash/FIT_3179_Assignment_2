@@ -1,0 +1,37 @@
+[
+    {
+      "Religion": "Judaism",
+      "Males": 48239,
+      "Females": 51713
+    },
+    {
+      "Religion": "Other Religions",
+      "Males": 163283,
+      "Females": 162136
+    },
+    {
+      "Religion": "Hinduism",
+      "Males": 361241,
+      "Females": 322758
+    },
+    {
+      "Religion": "Buddhism",
+      "Males": 265305,
+      "Females": 350514
+    },
+    {
+      "Religion": "Islam",
+      "Males": 424000,
+      "Females": 389392
+    },
+    {
+      "Religion": "No Religion",
+      "Males": 5064255,
+      "Females": 4703188
+    },
+    {
+      "Religion": "Christianity (all denominations)",
+      "Males": 5175151,
+      "Females": 5973665
+    }
+   ]
