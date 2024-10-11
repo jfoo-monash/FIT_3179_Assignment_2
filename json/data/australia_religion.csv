@@ -1,8 +1,15 @@
-Religion, Males, Females
-Judaism,48239,51713
-Other Religions,163283,162136
-Hinduism,361241,322758
-Buddhism,265305,350514
-Islam,424000,389392
-No Religion,5064255,4703188
-Christianity (all denominations),5175151,5973665
+Religion, Sex, Population
+Judaism,Male,51713
+Judaism,Female,48239
+Other Religions,Male,163283
+Other Religions,Female,162136
+Hinduism,Male,361241
+Hinduism,Female,322758
+Buddhism,Male,265305
+Buddhism,Female,350514
+Islam,Male,424000
+Islam,Female,389392
+No Religion,Male,5064255
+No Religion,Female,4703188
+Christianity (all denominations),Male,5175151
+Christianity (all denominations),Female,5973665
