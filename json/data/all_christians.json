@@ -60,16 +60,16 @@
     "Total": 535470
   },
   {
-    "Denomination": "Assyrian Apostolic",
+    "Denomination": "Other Christian",
     "Sex": "Male",
-    "Population": 9253,
-    "Total": 19141
+    "Population": 303752,
+    "Total": 661429
   },
   {
-    "Denomination": "Assyrian Apostolic",
+    "Denomination": "Other Christian",
     "Sex": "Female",
-    "Population": 9880,
-    "Total": 19141
+    "Population": 357677,
+    "Total": 661429
   },
   {
     "Denomination": "Baptist",
@@ -82,90 +82,6 @@
     "Sex": "Female",
     "Population": 184329,
     "Total": 347334
-  },
-  {
-    "Denomination": "Brethren",
-    "Sex": "Male",
-    "Population": 9057,
-    "Total": 18258
-  },
-  {
-    "Denomination": "Brethren",
-    "Sex": "Female",
-    "Population": 9203,
-    "Total": 18258
-  },
-  {
-    "Denomination": "Churches of Christ",
-    "Sex": "Male",
-    "Population": 15805,
-    "Total": 35928
-  },
-  {
-    "Denomination": "Churches of Christ",
-    "Sex": "Female",
-    "Population": 20124,
-    "Total": 35928
-  },
-  {
-    "Denomination": "Jehovah's Witnesses",
-    "Sex": "Male",
-    "Population": 36543,
-    "Total": 84405
-  },
-  {
-    "Denomination": "Jehovah's Witnesses",
-    "Sex": "Female",
-    "Population": 47861,
-    "Total": 84405
-  },
-  {
-    "Denomination": "Latter-day Saints",
-    "Sex": "Male",
-    "Population": 27610,
-    "Total": 57868
-  },
-  {
-    "Denomination": "Latter-day Saints",
-    "Sex": "Female",
-    "Population": 30260,
-    "Total": 57868
-  },
-  {
-    "Denomination": "Lutheran",
-    "Sex": "Male",
-    "Population": 65564,
-    "Total": 145868
-  },
-  {
-    "Denomination": "Lutheran",
-    "Sex": "Female",
-    "Population": 80307,
-    "Total": 145868
-  },
-  {
-    "Denomination": "Oriental Orthodox",
-    "Sex": "Male",
-    "Population": 30161,
-    "Total": 60774
-  },
-  {
-    "Denomination": "Oriental Orthodox",
-    "Sex": "Female",
-    "Population": 30620,
-    "Total": 60774
-  },
-  {
-    "Denomination": "Other Protestant",
-    "Sex": "Male",
-    "Population": 52933,
-    "Total": 112474
-  },
-  {
-    "Denomination": "Other Protestant",
-    "Sex": "Female",
-    "Population": 59545,
-    "Total": 112474
   },
   {
     "Denomination": "Pentecostal",
@@ -190,41 +106,5 @@
     "Sex": "Female",
     "Population": 220424,
     "Total": 414882
-  },
-  {
-    "Denomination": "Salvation Army",
-    "Sex": "Male",
-    "Population": 14878,
-    "Total": 35356
-  },
-  {
-    "Denomination": "Salvation Army",
-    "Sex": "Female",
-    "Population": 20480,
-    "Total": 35356
-  },
-  {
-    "Denomination": "Seventh-day Adventist",
-    "Sex": "Male",
-    "Population": 28948,
-    "Total": 63662
-  },
-  {
-    "Denomination": "Seventh-day Adventist",
-    "Sex": "Female",
-    "Population": 34714,
-    "Total": 63662
-  },
-  {
-    "Denomination": "Other Christian",
-    "Sex": "Male",
-    "Population": 13000,
-    "Total": 27679
-  },
-  {
-    "Denomination": "Other Christian",
-    "Sex": "Female",
-    "Population": 14683,
-    "Total": 27679
   }
  ]

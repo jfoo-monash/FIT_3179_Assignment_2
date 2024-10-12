@@ -1,0 +1,36 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {"text": "Australia's Religious Affiliations", "fontSize": 18},
+    "data": {
+      "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/australia_religion.json",
+      "format": {"type": "json"}
+    },
+    "transform": [
+      {
+          "calculate": "datum.Sex == 'Male' ? -datum.Population : datum.Population",
+          "as": "adjusted_population"
+      }
+    ],
+    "width": 300,
+    "height": 400,
+    "mark": "bar",
+    "encoding": {
+      "y": {"field": "Religion", "type": "nominal", "sort": null, "axis": {"title": "Religion"}},
+      "x": {
+        "field": "adjusted_population",
+        "type": "quantitative",
+        "axis": {
+          "title": "Population",
+          "format": "s",
+          "labelExpr": "abs(datum.value)"
+        }
+      },
+      "color": {"field": "Sex", "type": "nominal", "scale": {"range": ["#ff7f0e", "#1f77b4"]}},
+      "tooltip": [
+        {"field": "Sex", "type": "nominal"},
+        {"field": "Population", "type": "quantitative", "title": "Persons"},
+        {"field": "Total", "type": "quantitative", "title": "Grand Total"}
+      ]
+    }
+  }
+  
