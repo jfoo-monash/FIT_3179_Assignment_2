@@ -15,7 +15,7 @@
   "height": 400,
   "mark": "bar",
   "encoding": {
-    "y": {"field": "Religion", "type": "nominal", "sort": null, "axis": {"title": "Age Group"}},
+    "y": {"field": "Religion", "type": "nominal", "sort": null, "axis": {"title": "Religion"}},
     "x": {
       "field": "adjusted_population",
       "type": "quantitative",
