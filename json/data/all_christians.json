@@ -1,0 +1,224 @@
+[
+    {
+      "Anglican": "Anglican",
+      "Male": "Female",
+      "1135624": 1360653,
+      "2496273": 2496273
+    },
+    {
+      "Anglican": "Catholic",
+      "Male": "Male",
+      "1135624": 2391276,
+      "2496273": 5075907
+    },
+    {
+      "Anglican": "Catholic",
+      "Male": "Female",
+      "1135624": 2684627,
+      "2496273": 5075907
+    },
+    {
+      "Anglican": "No Denomination",
+      "Male": "Male",
+      "1135624": 319509,
+      "2496273": 688440
+    },
+    {
+      "Anglican": "No Denomination",
+      "Male": "Female",
+      "1135624": 368926,
+      "2496273": 688440
+    },
+    {
+      "Anglican": "Uniting Church",
+      "Male": "Male",
+      "1135624": 289969,
+      "2496273": 673260
+    },
+    {
+      "Anglican": "Uniting Church",
+      "Male": "Female",
+      "1135624": 383294,
+      "2496273": 673260
+    },
+    {
+      "Anglican": "Eastern Orthodox",
+      "Male": "Male",
+      "1135624": 260698,
+      "2496273": 535470
+    },
+    {
+      "Anglican": "Eastern Orthodox",
+      "Male": "Female",
+      "1135624": 274769,
+      "2496273": 535470
+    },
+    {
+      "Anglican": "Assyrian Apostolic",
+      "Male": "Male",
+      "1135624": 9253,
+      "2496273": 19141
+    },
+    {
+      "Anglican": "Assyrian Apostolic",
+      "Male": "Female",
+      "1135624": 9880,
+      "2496273": 19141
+    },
+    {
+      "Anglican": "Baptist",
+      "Male": "Male",
+      "1135624": 163007,
+      "2496273": 347334
+    },
+    {
+      "Anglican": "Baptist",
+      "Male": "Female",
+      "1135624": 184329,
+      "2496273": 347334
+    },
+    {
+      "Anglican": "Brethren",
+      "Male": "Male",
+      "1135624": 9057,
+      "2496273": 18258
+    },
+    {
+      "Anglican": "Brethren",
+      "Male": "Female",
+      "1135624": 9203,
+      "2496273": 18258
+    },
+    {
+      "Anglican": "Churches of Christ",
+      "Male": "Male",
+      "1135624": 15805,
+      "2496273": 35928
+    },
+    {
+      "Anglican": "Churches of Christ",
+      "Male": "Female",
+      "1135624": 20124,
+      "2496273": 35928
+    },
+    {
+      "Anglican": "Jehovah's Witnesses",
+      "Male": "Male",
+      "1135624": 36543,
+      "2496273": 84405
+    },
+    {
+      "Anglican": "Jehovah's Witnesses",
+      "Male": "Female",
+      "1135624": 47861,
+      "2496273": 84405
+    },
+    {
+      "Anglican": "Latter-day Saints",
+      "Male": "Male",
+      "1135624": 27610,
+      "2496273": 57868
+    },
+    {
+      "Anglican": "Latter-day Saints",
+      "Male": "Female",
+      "1135624": 30260,
+      "2496273": 57868
+    },
+    {
+      "Anglican": "Lutheran",
+      "Male": "Male",
+      "1135624": 65564,
+      "2496273": 145868
+    },
+    {
+      "Anglican": "Lutheran",
+      "Male": "Female",
+      "1135624": 80307,
+      "2496273": 145868
+    },
+    {
+      "Anglican": "Oriental Orthodox",
+      "Male": "Male",
+      "1135624": 30161,
+      "2496273": 60774
+    },
+    {
+      "Anglican": "Oriental Orthodox",
+      "Male": "Female",
+      "1135624": 30620,
+      "2496273": 60774
+    },
+    {
+      "Anglican": "Other Protestant",
+      "Male": "Male",
+      "1135624": 52933,
+      "2496273": 112474
+    },
+    {
+      "Anglican": "Other Protestant",
+      "Male": "Female",
+      "1135624": 59545,
+      "2496273": 112474
+    },
+    {
+      "Anglican": "Pentecostal",
+      "Male": "Male",
+      "1135624": 116857,
+      "2496273": 255838
+    },
+    {
+      "Anglican": "Pentecostal",
+      "Male": "Female",
+      "1135624": 138980,
+      "2496273": 255838
+    },
+    {
+      "Anglican": "Presbyterian and Reformed",
+      "Male": "Male",
+      "1135624": 194460,
+      "2496273": 414882
+    },
+    {
+      "Anglican": "Presbyterian and Reformed",
+      "Male": "Female",
+      "1135624": 220424,
+      "2496273": 414882
+    },
+    {
+      "Anglican": "Salvation Army",
+      "Male": "Male",
+      "1135624": 14878,
+      "2496273": 35356
+    },
+    {
+      "Anglican": "Salvation Army",
+      "Male": "Female",
+      "1135624": 20480,
+      "2496273": 35356
+    },
+    {
+      "Anglican": "Seventh-day Adventist",
+      "Male": "Male",
+      "1135624": 28948,
+      "2496273": 63662
+    },
+    {
+      "Anglican": "Seventh-day Adventist",
+      "Male": "Female",
+      "1135624": 34714,
+      "2496273": 63662
+    },
+    {
+      "Anglican": "Other Christian",
+      "Male": "Male",
+      "1135624": 13000,
+      "2496273": 27679
+    },
+    {
+      "Anglican": "Other Christian",
+      "Male": "Female",
+      "1135624": 14683,
+      "2496273": 27679
+    }
+   ]

@@ -1,38 +1,38 @@
-Anglican	Male	1135624	2496273
-Anglican	Female	1360653	2496273
-Catholic	Male	2391276	5075907
-Catholic	Female	2684627	5075907
-No Denomination	Male	319509	688440
-No Denomination	Female	368,926	688440
-Uniting Church	Male	289969	673260
-Uniting Church	Female	383294	673260
-Eastern Orthodox	Male	260698	535470
-Eastern Orthodox	Female	274769	535470
-Assyrian Apostolic	Male	9253	19141
-Assyrian Apostolic	Female	9880	19141
-Baptist	Male	163007	347334
-Baptist	Female	184329	347334
-Brethren	Male	9057	18258
-Brethren	Female	9203	18258
-Churches of Christ	Male	15805	35928
-Churches of Christ	Female	20124	35928
-Jehovah's Witnesses	Male	36543	84405
-Jehovah's Witnesses	Female	47861	84405
-Latter-day Saints	Male	27610	57868
-Latter-day Saints	Female	30260	57868
-Lutheran	Male	65564	145868
-Lutheran	Female	80307	145868
-Oriental Orthodox	Male	30161	60774
-Oriental Orthodox	Female	30620	60774
-Other Protestant	Male	52933	112474
-Other Protestant	Female	59545	112474
-Pentecostal	Male	116857	255838
-Pentecostal	Female	138980	255838
-Presbyterian and Reformed	Male	194460	414882
-Presbyterian and Reformed	Female	220424	414882
-Salvation Army	Male	14878	35356
-Salvation Army	Female	20480	35356
-Seventh-day Adventist	Male	28948	63662
-Seventh-day Adventist	Female	34714	63662
-Other Christian	Male	13000	27679
-Other Christian	Female	14683	27679
+Anglican,Male,1135624,2496273
+Anglican,Female,1360653,2496273
+Catholic,Male,2391276,5075907
+Catholic,Female,2684627,5075907
+No Denomination,Male,319509,688440
+No Denomination,Female,	368926,	688440
+Uniting Church,Male,289969,673260
+Uniting Church,Female,383294,673260
+Eastern Orthodox,Male,260698,535470
+Eastern Orthodox,Female,274769,535470
+Assyrian Apostolic,Male,9253,19141
+Assyrian Apostolic,Female,9880,19141
+Baptist,Male,163007,347334
+Baptist,Female,184329,347334
+Brethren,Male,9057,18258
+Brethren,Female,9203,18258
+Churches of Christ,Male,15805,35928
+Churches of Christ,Female,20124,35928
+Jehovah's Witnesses,Male,36543,84405
+Jehovah's Witnesses,Female,47861,84405
+Latter-day Saints,Male,27610,57868
+Latter-day Saints,Female,30260,57868
+Lutheran,Male,65564,145868
+Lutheran,Female,80307,145868
+Oriental Orthodox,Male,30161,60774
+Oriental Orthodox,Female,30620,60774
+Other Protestant,Male,52933,112474
+Other Protestant,Female,59545,112474
+Pentecostal,Male,116857,255838
+Pentecostal,Female,138980,255838
+Presbyterian and Reformed,Male,194460,414882
+Presbyterian and Reformed,Female,220424,414882
+Salvation Army,Male,14878,35356
+Salvation Army,Female,20480,35356
+Seventh-day Adventist,Male,28948,63662
+Seventh-day Adventist,Female,34714,63662
+Other Christian,Male,13000,27679
+Other Christian,Female,14683,27679

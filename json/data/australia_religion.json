@@ -1,72 +1,86 @@
 [
-    {
-      "Religion": "Judaism",
-      "Sex": "Male",
-      "Population": 51713
-    },
-    {
-      "Religion": "Judaism",
-      "Sex": "Female",
-      "Population": 48239
-    },
-    {
-      "Religion": "Other Religions",
-      "Sex": "Male",
-      "Population": 163283
-    },
-    {
-      "Religion": "Other Religions",
-      "Sex": "Female",
-      "Population": 162136
-    },
-    {
-      "Religion": "Hinduism",
-      "Sex": "Male",
-      "Population": 361241
-    },
-    {
-      "Religion": "Hinduism",
-      "Sex": "Female",
-      "Population": 322758
-    },
-    {
-      "Religion": "Buddhism",
-      "Sex": "Male",
-      "Population": 265305
-    },
-    {
-      "Religion": "Buddhism",
-      "Sex": "Female",
-      "Population": 350514
-    },
-    {
-      "Religion": "Islam",
-      "Sex": "Male",
-      "Population": 424000
-    },
-    {
-      "Religion": "Islam",
-      "Sex": "Female",
-      "Population": 389392
-    },
-    {
-      "Religion": "No Religion",
-      "Sex": "Male",
-      "Population": 5064255
-    },
-    {
-      "Religion": "No Religion",
-      "Sex": "Female",
-      "Population": 4703188
-    },
-    {
-      "Religion": "Christianity (all denominations)",
-      "Sex": "Male",
-      "Population": 5175151
-    },
-    {
-      "Religion": "Christianity (all denominations)",
-      "Sex": "Female",
-      "Population": 5973665
-    }
-   ]
+  {
+    "Religion": "Judaism",
+    "Sex": "Male",
+    "Population": 51713,
+    "Total": 99956
+  },
+  {
+    "Religion": "Judaism",
+    "Sex": "Female",
+    "Population": 48239,
+    "Total": 99956
+  },
+  {
+    "Religion": "Other Religions",
+    "Sex": "Male",
+    "Population": 163283,
+    "Total": 325421
+  },
+  {
+    "Religion": "Other Religions",
+    "Sex": "Female",
+    "Population": 162136,
+    "Total": 325421
+  },
+  {
+    "Religion": "Hinduism",
+    "Sex": "Male",
+    "Population": 361241,
+    "Total": 684002
+  },
+  {
+    "Religion": "Hinduism",
+    "Sex": "Female",
+    "Population": 322758,
+    "Total": 684002
+  },
+  {
+    "Religion": "Buddhism",
+    "Sex": "Male",
+    "Population": 265305,
+    "Total": 615823
+  },
+  {
+    "Religion": "Buddhism",
+    "Sex": "Female",
+    "Population": 350514,
+    "Total": 615823
+  },
+  {
+    "Religion": "Islam",
+    "Sex": "Male",
+    "Population": 424000,
+    "Total": 813392
+  },
+  {
+    "Religion": "Islam",
+    "Sex": "Female",
+    "Population": 389392,
+    "Total": 813392
+  },
+  {
+    "Religion": "No Religion",
+    "Sex": "Male",
+    "Population": 5064255,
+    "Total": 9767448
+  },
+  {
+    "Religion": "No Religion",
+    "Sex": "Female",
+    "Population": 4703188,
+    "Total": 9767448
+  },
+  {
+    "Religion": "Christianity (All Denominations)",
+    "Sex": "Male",
+    "Population": 5175151,
+    "Total": 11148814
+  },
+  {
+    "Religion": "Christianity (All Denominations)",
+    "Sex": "Female",
+    "Population": 5973665,
+    "Total": 11148814
+  }
+ ]
