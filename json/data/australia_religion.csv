@@ -1,15 +1,15 @@
-Religion, Sex, Population
-Judaism,Male,51713
-Judaism,Female,48239
-Other Religions,Male,163283
-Other Religions,Female,162136
-Hinduism,Male,361241
-Hinduism,Female,322758
-Buddhism,Male,265305
-Buddhism,Female,350514
-Islam,Male,424000
-Islam,Female,389392
-No Religion,Male,5064255
-No Religion,Female,4703188
-Christianity (all denominations),Male,5175151
-Christianity (all denominations),Female,5973665
+Religion, Sex, Population, Total
+Judaism,Male,51713,99956
+Judaism,Female,48239,99956
+Other Religions,Male,163283,325421
+Other Religions,Female,162136,325421
+Hinduism,Male,361241,684002
+Hinduism,Female,322758,684002
+Buddhism,Male,265305,615823
+Buddhism,Female,350514,615823
+Islam,Male,424000,813392
+Islam,Female,389392,813392
+No Religion,Male,5064255,9767448
+No Religion,Female,4703188,9767448
+Christianity (All Denominations),Male,5175151,11148814
+Christianity (All Denominations),Female,5973665,11148814
