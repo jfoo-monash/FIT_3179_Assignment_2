@@ -11,24 +11,50 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
     <!-- Extra scripts should go here -->
     <script>
-        // Embed vegalite chart script here
-        var greater_melbourne = "json/draft3.vg.json";
+        // Embed vegalite chart scripts here
+        var greater_melbourne = "json/map.vg.json";
         vegaEmbed('#ethnicity_map', greater_melbourne).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
           }).catch(console.error);
+        
+        var radial_bar = "json/radial_bar.vg.json";
+        vegaEmbed('#radial_bar', radial_bar).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+          }).catch(console.error);
+
+        var all_religions = "json/all_religions.vg.json";
+        vegaEmbed('#all_religions', all_religions).then(function(result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);      
+            
+        var all_christians = "json/all_christians.vg.json";
+        vegaEmbed('#all_christians', all_christians).then(function(result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
     </script>
 </head>
 <body>
-    <title>Cultural Diversity in Australia's Urban Areas</title>
-    <h1>Cultural Diversity in Australia's Urban Areas (2021)</h1>
-    <div id="description">
-        <!-- Put description text in here -->
+    <title>Diversity in Australia's Urban Areas</title>
+    <h1>Diversity in Australia's Urban Areas (2021)</h1>
+    <div class="pure-g">
+        <div id="ethnicity_map" class="pure-u-2-3">
+            <!-- Put map in here -->
+        </div>
+        <div id="radial_bar" class="pure-u-1-3">
+            <!-- Bar chart goes here -->
+        </div>
     </div>
-    <!-- Put maps in here -->
-     <div id="ethnicity_map">
+    <div class="pure-g">
+        <div id="all_religions" class="pure-u-1-2">
 
-     </div>
+        </div>
+        <div id="all_christians" class="pure-u-1-2">
+            
+        </div>
+    </div>
 </body>
 </html>
