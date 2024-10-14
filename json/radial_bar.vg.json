@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A radial bar chart with distinct segments for each category.",
-    "title": {"text": "Top 5 Ethnicities in Australia excluding Australians and English", "fontSize": 18},
+    "height": 500,
+    "width": 500,
     "data": {
       "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/top5.csv"
     },

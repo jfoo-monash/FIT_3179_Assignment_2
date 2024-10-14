@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {"text": "Christianity: Australia's Largest Religion", "fontSize": 18},
     "data": {
       "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/all_christians.json",
       "format": {"type": "json"}
@@ -12,7 +11,7 @@
       }
     ],
     "width": 300,
-    "height": 400,
+    "height": 500,
     "mark": "bar",
     "encoding": {
       "y": {"field": "Denomination", "type": "nominal", "sort": null, "axis": {"title": "Denomination"}},

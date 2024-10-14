@@ -1,16 +1,18 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Australia's Religious Affiliations", "fontSize": 18},
+  "height": 500,
+  "width": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/jfoo-monash/FIT_3179_Assignment_2/refs/heads/main/json/data/australia_religion.json"
   },
-  "mark": "bar",
+  "mark": {"type":"bar","size": 20},
   "encoding": {
     "x": {
       "field": "Religion",
       "type": "nominal",
-      "axis": {"title": "Religion"},
-      "title": "Religion"
+      "axis": {"title": "Religion","labelAngle": 30},
+      "title": "Religion",
+      "scale": {"padding": 0.2}
     },
     "xOffset": {
       "field": "Sex",

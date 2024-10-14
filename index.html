@@ -9,30 +9,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+    <!-- css links -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="css/layout_grid.css">
     <!-- Extra scripts should go here -->
     <script>
         // Embed vegalite chart scripts here
         var greater_melbourne = "json/map.vg.json";
-        vegaEmbed('#ethnicity_map', greater_melbourne).then(function(result) {
+        vegaEmbed('#ethnicity_map', greater_melbourne, {"actions": false}).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
           }).catch(console.error);
         
         var radial_bar = "json/radial_bar.vg.json";
-        vegaEmbed('#radial_bar', radial_bar).then(function(result) {
+        vegaEmbed('#radial_bar', radial_bar, {"actions": false}).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
           }).catch(console.error);
 
         var all_religions = "json/all_religions.vg.json";
-        vegaEmbed('#all_religions', all_religions).then(function(result) {
+        vegaEmbed('#all_religions', all_religions, {"actions": false}).then(function(result) {
               // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             }).catch(console.error);      
             
         var all_christians = "json/all_christians.vg.json";
-        vegaEmbed('#all_christians', all_christians).then(function(result) {
+        vegaEmbed('#all_christians', all_christians, {"actions": false}).then(function(result) {
               // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
     </script>
@@ -41,20 +43,74 @@
     <title>Diversity in Australia's Urban Areas</title>
     <h1>Diversity in Australia's Urban Areas (2021)</h1>
     <div class="pure-g">
-        <div id="ethnicity_map" class="pure-u-2-3">
-            <!-- Put map in here -->
+        <div class="pure-u-1-24"></div>
+        <div class="pure-u-6-24">
+            <div id="section_1_desc">
+                <h2>Cultural Diversity</h2>
+                <p>
+                    For the purpose of this visualisation, ethnicities are: The non-Australian and non-English population<br><br>
+                    Cultural diversity in Australia overall is still surprisingly low, with the majority of people in Australia claiming either English or Australian heritage. About 25% of Australia's population consists of people who identify within a group that is not either Australianor English in heritage. 
+                    <br><br>
+                    The greatest concentration of ethnic peoples are in the cities of Sydney and Melbourne, with most of the population in other cities being much lower.
+                </p>
+            </div>
         </div>
-        <div id="radial_bar" class="pure-u-1-3">
-            <!-- Bar chart goes here -->
+        <div class="pure-u-8-24">    
+            <div id="desc_map">
+                <!-- Text description and title here -->
+                <h4>Austalia's Ethnicities in Capital Cities</h4>
+            </div>
+            <div id="ethnicity_map">
+                <!-- Put map in here -->
+            </div>
         </div>
+        <div class="pure-u-8-24">
+            <div id="desc_radial">
+                <!-- Text description and title here -->
+                <h4>Biggest Ethnic Groups in Australia</h4>
+            </div>
+            <div id="radial_bar">
+                <!-- Put chart in here -->
+            </div>
+        </div>
+        <div class="pure-u-1-24"></div>
     </div>
+    <br>
+    <br>
     <div class="pure-g">
-        <div id="all_religions" class="pure-u-1-2">
+        <div class="pure-u-1-24"></div>
+        <div class="pure-u-6-24">
+            <h2>Religious Diversity</h2>
+            <p>
+                Australians for the most part appear to be either Christians or Atheists, with Christians being seperated into different denominations 
+                for the sake of the census. There exists many other groups in Australia, however they are extremely low in number compared to Christianity,
+                with some religions having less members than some denominations of Christianity.
+                <br><br>
+                Within Christianity, the largest denomination is Catholicism, which arguably is an entirely seperate religion to Christianity despite sharing 
+                similar beliefs. The largest denomination within Christianity are the Anglicans, with all other denominations being relatively small in number compared
+                to that both these groups.
+            </p>
+        </div>
+        <div class="pure-u-8-24">
+            <div id="desc_group_bar">
+                <!-- Text description and title here -->
+                <h4>Austalia's Ethnicities in Capital Cities</h4>
+            </div>
+            <div id="all_religions">
+                <!-- Put chart in here -->
+            </div>
+        </div>
+        <div class="pure-u-8-24">
+            <div id="desc_pop_pyramid">
+                <!-- Text description and title here -->
+                <h4>Austalia's Ethnicities in Capital Cities</h4>
+            </div>
+            <div id="all_christians">
+                <!-- Put chart in here -->
+            </div>
+        </div>
+        <div class="pure-u-1-24"></div>
 
-        </div>
-        <div id="all_christians" class="pure-u-1-2">
-            
-        </div>
     </div>
 </body>
 </html>
