@@ -1,0 +1,25 @@
+h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Merriweather", serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: larger;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:larger;
+}

@@ -10,8 +10,8 @@
           "as": "adjusted_population"
       }
     ],
-    "width": 300,
-    "height": 500,
+    "width": 400,
+    "height": 575,
     "mark": "bar",
     "encoding": {
       "y": {"field": "Denomination", "type": "nominal", "sort": null, "axis": {"title": "Denomination"}},
