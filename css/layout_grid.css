@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.pure-u-5-24 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pure-u-2-24 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
