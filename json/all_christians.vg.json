@@ -26,6 +26,7 @@
       },
       "color": {"field": "Sex", "type": "nominal", "scale": {"range": ["#ff7f0e", "#1f77b4"]}},
       "tooltip": [
+        {"field": "Denomination", "type": "nominal"},
         {"field": "Sex", "type": "nominal"},
         {"field": "Population", "type": "quantitative", "title": "Persons"},
         {"field": "Total", "type": "quantitative", "title": "Grand Total"}
